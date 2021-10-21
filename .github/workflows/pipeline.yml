@@ -54,7 +54,7 @@ jobs:
       - name: Azure Kubernetes set context
         uses: Azure/aks-set-context@v1
         with:
-          creds: ${{ secrets.AZURE_CREDTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
           resource-group: rg-handsonaks
           cluster-name: handsonaks
       
