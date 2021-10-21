@@ -23,6 +23,7 @@ jobs:
   CI:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    environment: Production
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -46,6 +47,7 @@ jobs:
           tags: ${{ env.ACRNAME }}.azurecr.io/website/website:${{ github.run_number }}
   CD:
     runs-on: ubuntu-latest
+    environment: Production
     needs: CI
     steps:
       - name: Git checkout
